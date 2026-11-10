@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zalando GTM Organic Visibility - Assets Intake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --zalando-orange: #ff6900;
+      --zalando-orange-hover: #e05d00;
+      --zalando-black: #111111;
+      --zalando-dark: #1e1e1e;
+      --zalando-gray-dark: #222425;
+      --zalando-gray-mid: #5e6066;
+      --zalando-gray-light: #f5f5f7;
+      --zalando-border: #dcdce0;
+      --bg: #f8f8fa;
+      --card-bg: #ffffff;
+      --font-stack: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; font-family: var(--font-stack); }
+    body { background: var(--bg); color: var(--zalando-black); margin: 0; padding: 0; font-size: 13px; -webkit-font-smoothing: antialiased; }
+    
+    .top-nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--zalando-border);
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    .header-app-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--zalando-black);
+    }
+    .nav-actions { display: flex; gap: 14px; align-items: center; }
+    .link-item {
+      color: var(--zalando-gray-mid);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .link-item:hover { color: var(--zalando-orange); background: var(--zalando-gray-light); }
+
+    /* Layout Grid */
+    .layout-wrapper {
+      max-width: 980px;
+      margin: 18px auto 36px auto;
+      padding: 0 14px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .layout-wrapper { grid-template-columns: 1fr; }
+    }
+    
+    .hero-banner {
+      background: linear-gradient(135deg, #111111 0%, #222222 100%);
+      color: #ffffff;
+      border-radius: 6px 6px 0 0;
+      padding: 16px 22px;
+      border-bottom: 3px solid var(--zalando-orange);
+    }
+    .section-title { font-size: 1.45rem; font-weight: 700; margin: 0; letter-spacing: -0.02em; color: #ffffff; }
+
+    .compact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--zalando-border);
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+      padding: 18px 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .notice-box {
+      background: #fff8f3;
+      border: 1px solid #ffe1cc;
+      border-left: 3px solid var(--zalando-orange);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #7c2d12;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .form-row { margin-bottom: 10px; display: flex; flex-direction: column; }
+    .form-row-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px; }
+    .label-wrapper { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+    label { font-size: 0.82rem; font-weight: 600; color: var(--zalando-gray-dark); }
+    
+    input[type="text"], input[type="date"], input[type="password"], select, textarea {
+      width: 100%;
+      height: 36px;
+      padding: 0 10px;
+      border: 1px solid var(--zalando-border);
+      border-radius: 4px;
+      font-size: 0.88rem;
+      background: #ffffff;
+      color: var(--zalando-black);
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    textarea {
+      height: 52px;
+      padding: 8px 10px;
+      resize: vertical;
+      line-height: 1.4;
+    }
+    input[type="text"]:focus, input[type="date"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+      border-color: var(--zalando-orange);
+      box-shadow: 0 0 0 2px rgba(255, 105, 0, 0.12);
+    }
+
+    /* Gender Switch */
+    .gender-switch {
+      display: inline-flex;
+      background: var(--zalando-gray-light);
+      border: 1px solid var(--zalando-border);
+      border-radius: 4px;
+      padding: 2px;
+      width: 100%;
+      max-width: 220px;
+    }
+    .gender-btn {
+      flex: 1;
+      padding: 5px 10px;
+      border: none;
+      background: transparent;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--zalando-gray-mid);
+      border-radius: 3px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s ease;
+    }
+    .gender-btn.active {
+      background: #ffffff;
+      color: var(--zalando-black);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      font-weight: 700;
+    }
+
+    /* Sport select */
+    .select-icon-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
+    .sport-icon-display { position: absolute; left: 10px; font-size: 1rem; pointer-events: none; }
+    .select-icon-wrapper select { padding-left: 34px; cursor: pointer; }
+
+    /* Date Picker */
+    .date-click-wrapper { position: relative; display: flex; align-items: center; width: 100%; cursor: pointer; }
+    .date-click-wrapper input[type="date"] { cursor: pointer; }
+
+    /* Tooltip */
+    .tooltip-container { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
+    .tooltip-icon {
+      width: 14px;
+      height: 14px;
+      background: var(--zalando-border);
+      color: var(--zalando-gray-dark);
+      border-radius: 50%;
+      font-size: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .tooltip-container:hover .tooltip-icon { background: var(--zalando-orange); color: #fff; }
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--zalando-black);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 400;
+      padding: 5px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+      transition: opacity 0.15s ease, visibility 0.15s ease;
+      z-index: 20;
+    }
+    .tooltip-container:hover .tooltip-text { visibility: visible; opacity: 1; }
+
+    .checkbox-container { display: flex; align-items: center; gap: 8px; }
+    .checkbox-container input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--zalando-orange); cursor: pointer; margin: 0; }
+    .checkbox-label { font-size: 0.82rem; font-weight: 600; color: var(--zalando-gray-dark); display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+    /* Upload Box */
+    .drop-box {
+      border: 1.5px dashed #111111;
+      border-radius: 4px;
+      padding: 16px 14px;
+      text-align: center;
+      background: #fafafa;
+      cursor: pointer;
+      color: #111111;
+      transition: all 0.15s ease;
+    }
+    .drop-box:hover { border-color: var(--zalando-orange); background: #ffffff; }
+    .upload-icons { display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 6px; color: #111111; }
+    .upload-icons svg { width: 24px; height: 24px; }
+    .drop-box p { margin: 0 0 3px 0; font-weight: 700; font-size: 0.88rem; color: #111111; }
+    .drop-box span { font-size: 0.78rem; color: #111111; font-weight: 500; }
+    
+    .upload-previews { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .preview-box { position: relative; width: 76px; height: 76px; border: 1.5px solid var(--zalando-border); border-radius: 4px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; text-align: center; padding: 4px; }
+    .preview-box img { width: 100%; height: 100%; object-fit: cover; }
+    .preview-remove { position: absolute; top: 3px; right: 3px; background: rgba(0,0,0,0.75); color: #fff; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: 700; }
+
+    /* Submit Button & Progress Animation */
+    .btn-primary {
+      background: var(--zalando-orange);
+      color: #ffffff;
+      border: none;
+      height: 42px;
+      padding: 0 20px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.05s ease;
+      width: 100%;
+      margin-top: 8px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-primary:hover { background: var(--zalando-orange-hover); }
+    .btn-primary:active { transform: scale(0.99); }
+    .btn-primary:disabled { opacity: 0.85; cursor: not-allowed; }
+
+    .upload-spinner {
+      display: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .btn-progress-bar {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.9);
+      width: 0%;
+      animation: progressPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes progressPulse {
+      0% { width: 10%; left: 0%; }
+      50% { width: 70%; left: 20%; }
+      100% { width: 100%; left: 0%; }
+    }
+
+    /* Right-Hand User-Specific Upload Queue */
+    .queue-card {
+      background: #ffffff;
+      border: 1px solid var(--zalando-border);
+      border-radius: 6px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .queue-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--zalando-border);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .queue-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--zalando-black);
+    }
+    .queue-badge {
+      background: var(--zalando-gray-light);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--zalando-gray-mid);
+    }
+    .queue-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 480px;
+      overflow-y: auto;
+    }
+    .queue-item {
+      background: var(--zalando-gray-light);
+      border: 1px solid var(--zalando-border);
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 0.78rem;
+      border-left: 3px solid var(--zalando-orange);
+      animation: itemFadeIn 0.3s ease forwards;
+    }
+    @keyframes itemFadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .queue-item-name {
+      font-weight: 700;
+      color: var(--zalando-black);
+      word-break: break-all;
+      margin-bottom: 3px;
+    }
+    .queue-item-meta {
+      color: var(--zalando-gray-mid);
+      font-size: 0.72rem;
+    }
+    .queue-empty {
+      color: var(--zalando-gray-mid);
+      font-size: 0.78rem;
+      text-align: center;
+      padding: 18px 0;
+    }
+
+    /* Toast System */
+    .toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 440px;
+      pointer-events: none;
+    }
+    .toast-card {
+      pointer-events: auto;
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 14px 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border-left: 4px solid #111111;
+      animation: toastSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      transition: opacity 0.2s ease;
+    }
+    @keyframes toastSlideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .toast-card.success { border-left-color: #10b981; }
+    .toast-card.error { border-left-color: #ef4444; }
+    .toast-icon { font-size: 1.3rem; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .toast-content { flex: 1; }
+    .toast-title { font-weight: 700; font-size: 0.92rem; color: var(--zalando-black); margin-bottom: 3px; }
+    .toast-msg { font-size: 0.84rem; color: #4b5563; line-height: 1.45; word-break: break-word; }
+    .toast-close { cursor: pointer; color: #9ca3af; font-size: 1.2rem; line-height: 1; margin-left: 6px; }
+    .toast-close:hover { color: var(--zalando-black); }
+
+    /* Admin View */
+    .admin-container { grid-column: 1 / -1; }
+    .admin-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 14px; }
+    .folder-card { background: #ffffff; border: 1px solid var(--zalando-border); border-radius: 6px; padding: 12px; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease; }
+    .folder-card:hover { transform: translateY(-2px); border-color: var(--zalando-orange); box-shadow: 0 3px 8px rgba(0,0,0,0.06); }
+    .folder-icon { font-size: 1.4rem; margin-bottom: 4px; }
+    .folder-name { font-weight: 700; font-size: 0.85rem; color: var(--zalando-black); word-break: break-all; margin-bottom: 3px; }
+    .folder-meta { font-size: 0.72rem; color: var(--zalando-gray-mid); line-height: 1.4; }
+
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 1000; align-items: center; justify-content: center; padding: 16px; }
+    .modal-sheet { background: #ffffff; border-radius: 6px; width: 100%; max-width: 620px; max-height: 85vh; overflow-y: auto; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--zalando-border); padding-bottom: 10px; margin-bottom: 12px; }
+    .modal-title { font-weight: 700; font-size: 1.05rem; }
+    .modal-close { font-size: 1.3rem; cursor: pointer; color: var(--zalando-gray-mid); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; margin-top: 12px; }
+    .gallery-item { aspect-ratio: 1; border: 1px solid var(--zalando-border); border-radius: 4px; overflow: hidden; background: #fafafa; display: flex; align-items: center; justify-content: center; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    .open-drive-btn { display: inline-block; margin-top: 14px; padding: 8px 14px; background: var(--zalando-black); color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <header class="top-nav">
+    <div class="brand-cluster">
+      <span class="header-app-title">Zalando GTM Organic Visibility - Assets Intake</span>
+    </div>
+    <div class="nav-actions">
+      <span class="link-item" id="nav-switch-btn" onclick="toggleViews()">Admin Workbench</span>
+    </div>
+  </header>
+
+  <div class="layout-wrapper">
+    <!-- INTAKE VIEW -->
+    <div id="submit-section">
+      <div class="hero-banner">
+        <h2 class="section-title">Upload Product Assets</h2>
+      </div>
+
+      <div class="compact-card">
+        <div class="notice-box">
+          Please note: Visibility is not guaranteed, but submitting assets enables us to more likely be able to consider them for visibility.
+        </div>
+
+        <form id="intake-form" onsubmit="handleFormSubmission(event)">
+          
+          <!-- Gender Toggle: Men OR Women -->
+          <div class="form-row">
+            <div class="label-wrapper">
+              <label>Gender Segment</label>
+            </div>
+            <div class="gender-switch">
+              <button type="button" class="gender-btn active" id="btn-men" onclick="setGender('Men')">Men</button>
+              <button type="button" class="gender-btn" id="btn-women" onclick="setGender('Women')">Women</button>
+            </div>
+            <input type="hidden" id="genderInput" value="Men">
+          </div>
+
+          <!-- Brand & Product -->
+          <div class="form-row-duo">
+            <div class="form-row" style="margin-bottom: 0;">
+              <div class="label-wrapper">
+                <label for="brand">Brand</label>
+              </div>
+              <input type="text" id="brand" required>
+            </div>
+            <div class="form-row" style="margin-bottom: 0;">
+              <div class="label-wrapper">
+                <label for="productName">Product Name</label>
+              </div>
+              <input type="text" id="productName" required>
+            </div>
+          </div>
+
+          <!-- Sport & Launch Date Duo -->
+          <div class="form-row-duo">
+            <div class="form-row" style="margin-bottom: 0;">
+              <div class="label-wrapper">
+                <label for="sport">Sport Type</label>
+                <div class="tooltip-container">
+                  <span class="tooltip-icon">i</span>
+                  <span class="tooltip-text">Other sport types are not currently supported</span>
+                </div>
+              </div>
+              <div class="select-icon-wrapper">
+                <span class="sport-icon-display" id="sport-icon">🏃</span>
+                <select id="sport" required onchange="updateSportIcon(this.value)">
+                  <option value="Running" selected>Running</option>
+                  <option value="Football">Football</option>
+                  <option value="Training">Training</option>
+                  <option value="Outdoor">Outdoor</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row" style="margin-bottom: 0;">
+              <div class="label-wrapper">
+                <label for="idealDate">Ideal Launch Date</label>
+                <div class="tooltip-container">
+                  <span class="tooltip-icon">i</span>
+                  <span class="tooltip-text">Exact date not guaranteed</span>
+                </div>
+              </div>
+              <div class="date-click-wrapper" onclick="triggerDatePicker(event)">
+                <input type="date" id="idealDate" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hard Launch Date -->
+          <div class="form-row">
+            <div class="checkbox-container">
+              <input type="checkbox" id="hld">
+              <label class="checkbox-label" for="hld">
+                <span>Hard Launch Date (HLD)</span>
+                <span class="tooltip-container">
+                  <span class="tooltip-icon">i</span>
+                  <span class="tooltip-text">Cannot go live prior to this date, but may launch anytime after</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Upload Drop Box -->
+          <div class="form-row">
+            <div class="label-wrapper">
+              <label>Images or Copy Uploads</label>
+            </div>
+            <div class="drop-box" onclick="document.getElementById('file-input').click()">
+              <div class="upload-icons">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="8" y1="13" x2="16" y2="13"></line>
+                  <line x1="8" y1="17" x2="16" y2="17"></line>
+                  <line x1="10" y1="9" x2="8" y2="9"></line>
+                </svg>
+              </div>
+              <p>Click or drag files here to upload</p>
+              <span>Accepts all standard images (.png, .jpg, .jpeg, .svg, .webp) and spreadsheets (.csv, .xls, .xlsx)</span>
+              <input type="file" id="file-input" accept=".png,.jpg,.jpeg,.svg,.webp,.gif,.csv,.xls,.xlsx" multiple style="display:none" onchange="handleFileBatch(event)">
+            </div>
+            <div class="upload-previews" id="preview-container"></div>
+          </div>
+
+          <!-- Comments Field -->
+          <div class="form-row">
+            <div class="label-wrapper">
+              <label for="comments">Comments</label>
+            </div>
+            <textarea id="comments" placeholder="Add any relevant notes, launch contexts, or asset specifications..."></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-primary" id="submit-btn">
+            <span class="upload-spinner" id="upload-spinner"></span>
+            <span id="submit-btn-text">Submit Assets</span>
+            <span class="btn-progress-bar" id="btn-progress-bar"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- RIGHT-HAND USER QUEUE -->
+    <div id="queue-section">
+      <div class="queue-card">
+        <div class="queue-header">
+          <span class="queue-title">Your Recent Uploads</span>
+          <span class="queue-badge" id="queue-count">0</span>
+        </div>
+        <div class="queue-list" id="queue-list">
+          <div class="queue-empty" id="queue-empty">No submissions from this session yet.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADMIN SECTION -->
+    <div id="admin-section" class="admin-container" style="display: none;">
+      <div class="hero-banner">
+        <h2 class="section-title">Admin Asset Directory</h2>
+      </div>
+
+      <div class="compact-card" id="admin-auth-card">
+        <h4 style="margin: 0 0 8px 0; font-size: 0.95rem;">Authentication Required</h4>
+        <p style="font-size: 0.8rem; color: var(--zalando-gray-mid); margin-bottom: 12px;">
+          Access requires administrative authorization.
+        </p>
+        <div class="form-row">
+          <label>Password</label>
+          <input type="password" id="admin-pass" placeholder="Enter administrative password" onkeydown="handleAdminKeydown(event)">
+        </div>
+        <button type="button" class="btn-primary" onclick="loadAdminFolders()">Authenticate & Open</button>
+      </div>
+
+      <div class="compact-card" id="admin-content-area" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--zalando-border); padding-bottom: 10px;">
+          <h4 style="margin: 0; font-size: 0.95rem;">Virtual Submission Folders</h4>
+          <span class="link-item" onclick="loadAdminFolders()">Refresh Folders</span>
+        </div>
+        <div class="admin-grid" id="folders-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="preview-modal">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-folder-name">Folder Details</span>
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+      </div>
+      <div id="modal-details" style="font-size: 0.82rem; line-height: 1.5; color: var(--zalando-gray-dark);"></div>
+      <div class="gallery-grid" id="modal-gallery"></div>
+      <a href="#" target="_blank" class="open-drive-btn" id="modal-drive-link">Open in Google Drive ↗</a>
+    </div>
+  </div>
+
+<script>
+  // PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL HERE:
+  const SCRIPT_URL = "https://script.google.com/a/macros/zalando.de/s/AKfycbwKdF9W6RZiQ-8JMn1f2J-59C1GATlyE6882xF-5YShDVEitn1Re3hwk9MIReQMKBop/exec";
+
+  let rawFiles = [];
+  let cachedSubmissions = [];
+  const LOCAL_STORAGE_KEY = 'zalando_gtm_user_queue';
+
+  const sportIcons = {
+    'Running': '🏃',
+    'Football': '⚽',
+    'Training': '🏋️',
+    'Outdoor': '🏔️'
+  };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('idealDate');
+    dateInput.setAttribute('min', today);
+    loadUserQueue();
+  });
+
+  function showToast(title, message, type = 'info') {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast-card ${type}`;
+
+    const icon = type === 'success' ? '✓' : type === 'error' ? '⚠' : 'ℹ';
+
+    toast.innerHTML = `
+      <div class="toast-icon">${icon}</div>
+      <div class="toast-content">
+        <div class="toast-title">${escapeHtml(title)}</div>
+        <div class="toast-msg">${escapeHtml(message)}</div>
+      </div>
+      <span class="toast-close" onclick="this.parentElement.remove()">&times;</span>
+    `;
+
+    container.appendChild(toast);
+    setTimeout(() => {
+      if (toast && toast.parentElement) {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 250);
+      }
+    }, 6000);
+  }
+
+  function setGender(val) {
+    document.getElementById('genderInput').value = val;
+    document.getElementById('btn-men').classList.toggle('active', val === 'Men');
+    document.getElementById('btn-women').classList.toggle('active', val === 'Women');
+  }
+
+  function updateSportIcon(val) {
+    document.getElementById('sport-icon').innerText = sportIcons[val] || '🏅';
+  }
+
+  function triggerDatePicker(e) {
+    const picker = document.getElementById('idealDate');
+    if (!picker) return;
+    if (e.target !== picker) {
+      if (typeof picker.showPicker === 'function') {
+        try { picker.showPicker(); } catch (err) { picker.focus(); }
+      } else {
+        picker.focus();
+      }
+    }
+  }
+
+  function handleAdminKeydown(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      loadAdminFolders();
+    }
+  }
+
+  async function handleFileBatch(e) {
+    const fileList = Array.from(e.target.files);
+    if (!fileList.length) return;
+
+    const readFileAsync = (file) => {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          resolve({
+            name: file.name,
+            type: file.type || 'application/octet-stream',
+            base64: evt.target.result,
+            isImage: file.type.startsWith('image/') || /\.(png|jpe?g|svg|webp|gif)$/i.test(file.name)
+          });
+        };
+        reader.readAsDataURL(file);
+      });
+    };
+
+    const parsedBatch = await Promise.all(fileList.map(readFileAsync));
+    rawFiles = rawFiles.concat(parsedBatch);
+    renderPreviews();
+    e.target.value = '';
+  }
+
+  function renderPreviews() {
+    const container = document.getElementById('preview-container');
+    container.innerHTML = '';
+    rawFiles.forEach((file, index) => {
+      const box = document.createElement('div');
+      box.className = 'preview-box';
+      if (file.isImage) {
+        box.innerHTML = `<img src="${file.base64}"><span class="preview-remove" onclick="removeImage(${index})">&times;</span>`;
+      } else {
+        box.innerHTML = `<span>📊<br>${escapeHtml(file.name.substring(0, 10))}</span><span class="preview-remove" onclick="removeImage(${index})">&times;</span>`;
+      }
+      container.appendChild(box);
+    });
+  }
+
+  function removeImage(index) {
+    rawFiles.splice(index, 1);
+    renderPreviews();
+  }
+
+  function handleFormSubmission(e) {
+    e.preventDefault();
+    if (rawFiles.length === 0) {
+      showToast('Missing Assets', 'Please attach at least one valid image or copy spreadsheet before submitting.', 'error');
+      return;
+    }
+
+    const btn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('submit-btn-text');
+    const spinner = document.getElementById('upload-spinner');
+    const progressBar = document.getElementById('btn-progress-bar');
+
+    btn.disabled = true;
+    btnText.innerText = 'Uploading Assets...';
+    spinner.style.display = 'inline-block';
+    progressBar.style.display = 'block';
+
+    const payload = {
+      gender: document.getElementById('genderInput').value,
+      brand: document.getElementById('brand').value.trim(),
+      productName: document.getElementById('productName').value.trim(),
+      sport: document.getElementById('sport').value,
+      idealDate: document.getElementById('idealDate').value,
+      hld: document.getElementById('hld').checked,
+      comments: document.getElementById('comments').value.trim(),
+      files: rawFiles
+    };
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(res => {
+      btn.disabled = false;
+      btnText.innerText = 'Submit Assets';
+      spinner.style.display = 'none';
+      progressBar.style.display = 'none';
+
+      if (res.success) {
+        showToast(`Upload Complete: ${res.folderName}`, `${res.filesUploaded} file(s) saved to Drive and logged to Google Sheets.`, 'success');
+        
+        persistUserQueueItem({
+          folderName: res.folderName,
+          timestamp: res.timestamp || new Date().toLocaleTimeString(),
+          filesCount: res.filesUploaded
+        });
+
+        document.getElementById('intake-form').reset();
+        setGender("Men");
+        updateSportIcon('Running');
+        rawFiles = [];
+        renderPreviews();
+      } else {
+        showToast('Upload Failed', res.error, 'error');
+      }
+    })
+    .catch(err => {
+      btn.disabled = false;
+      btnText.innerText = 'Submit Assets';
+      spinner.style.display = 'none';
+      progressBar.style.display = 'none';
+      showToast('System Error', err.message, 'error');
+    });
+  }
+
+  function loadUserQueue() {
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+    } catch (e) {
+      items = [];
+    }
+    renderUserQueue(items);
+  }
+
+  function persistUserQueueItem(item) {
+    let items = [];
+    try {
+      items = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+    } catch (e) {
+      items = [];
+    }
+    items.unshift(item);
+    if (items.length > 25) items = items.slice(0, 25);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(items));
+    renderUserQueue(items);
+  }
+
+  function renderUserQueue(items) {
+    const list = document.getElementById('queue-list');
+    const countBadge = document.getElementById('queue-count');
+    const emptyNotice = document.getElementById('queue-empty');
+
+    countBadge.innerText = items.length;
+    list.innerHTML = '';
+
+    if (!items.length) {
+      emptyNotice.style.display = 'block';
+      list.appendChild(emptyNotice);
+      return;
+    }
+
+    emptyNotice.style.display = 'none';
+    items.forEach(item => {
+      const itemEl = document.createElement('div');
+      itemEl.className = 'queue-item';
+      itemEl.innerHTML = `
+        <div class="queue-item-name">${escapeHtml(item.folderName)}</div>
+        <div class="queue-item-meta">${escapeHtml(item.timestamp)} • ${item.filesCount} file(s)</div>
+      `;
+      list.appendChild(itemEl);
+    });
+  }
+
+  function toggleViews() {
+    const sSection = document.getElementById('submit-section');
+    const qSection = document.getElementById('queue-section');
+    const aSection = document.getElementById('admin-section');
+    const navBtn = document.getElementById('nav-switch-btn');
+
+    if (sSection.style.display === 'none') {
+      sSection.style.display = 'block';
+      qSection.style.display = 'block';
+      aSection.style.display = 'none';
+      navBtn.innerText = 'Admin Workbench';
+    } else {
+      sSection.style.display = 'none';
+      qSection.style.display = 'none';
+      aSection.style.display = 'block';
+      navBtn.innerText = 'Intake Form';
+    }
+  }
+
+  function loadAdminFolders() {
+    const pass = document.getElementById('admin-pass').value;
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify({
+        action: 'fetchAdminData',
+        password: pass
+      })
+    })
+    .then(response => response.json())
+    .then(res => {
+      if (res.success) {
+        cachedSubmissions = res.data;
+        document.getElementById('admin-auth-card').style.display = 'none';
+        document.getElementById('admin-content-area').style.display = 'block';
+        renderVirtualFolders(res.data);
+      } else {
+        showToast('Access Denied', res.error, 'error');
+      }
+    })
+    .catch(err => {
+      showToast('Connection Error', err.message, 'error');
+    });
+  }
+
+  function renderVirtualFolders(submissions) {
+    const grid = document.getElementById('folders-grid');
+    grid.innerHTML = '';
+
+    if (!submissions || submissions.length === 0) {
+      grid.innerHTML = '<p style="color:var(--zalando-gray-mid);">No submissions found in directory.</p>';
+      return;
+    }
+
+    submissions.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.className = 'folder-card';
+      card.onclick = () => openFolderModal(index);
+      const icon = sportIcons[item.sport] || '📁';
+
+      card.innerHTML = `
+        <div class="folder-icon">${icon}</div>
+        <div class="folder-name">${escapeHtml(item.brand)} - ${escapeHtml(item.product)}</div>
+        <div class="folder-meta">
+          <strong>Gender:</strong> ${escapeHtml(item.gender || "Men")}<br>
+          <strong>Sport:</strong> ${escapeHtml(item.sport)}<br>
+          <strong>Ideal:</strong> ${escapeHtml(item.idealDate)} | <strong>HLD:</strong> ${escapeHtml(item.hld)}<br>
+          <strong>Files:</strong> ${item.files.length} file(s)
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function openFolderModal(index) {
+    const item = cachedSubmissions[index];
+    document.getElementById('modal-folder-name').innerText = `${item.brand} | ${item.product}`;
+    document.getElementById('modal-details').innerHTML = `
+      <strong>Logged:</strong> ${escapeHtml(item.inputDateTime)}<br>
+      <strong>Gender Segment:</strong> ${escapeHtml(item.gender || "Men")}<br>
+      <strong>Sport Type:</strong> ${escapeHtml(item.sport)}<br>
+      <strong>Ideal Launch Date:</strong> ${escapeHtml(item.idealDate)}<br>
+      <strong>Hard Launch Date (HLD):</strong> ${escapeHtml(item.hld).toUpperCase()}<br>
+      ${item.comments ? `<strong>Comments:</strong> ${escapeHtml(item.comments)}<br>` : ''}
+    `;
+
+    const gallery = document.getElementById('modal-gallery');
+    gallery.innerHTML = '';
+
+    if (item.files && item.files.length > 0) {
+      item.files.forEach(f => {
+        const thumb = document.createElement('div');
+        thumb.className = 'gallery-item';
+        if (f.type && (f.type.startsWith('image/') || /\.(png|jpe?g|svg|webp|gif)$/i.test(f.name))) {
+          thumb.innerHTML = `<img src="https://drive.google.com/thumbnail?id=${f.id}&sz=w400" alt="${escapeHtml(f.name)}" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\\'http://www.w3.org/2000/svg\\\' width=\\\'100\\\' height=\\\'100\\\'><rect width=\\\'100\\\' height=\\\'100\\\' fill=\\\'%23eee\\\'/><text x=\\\'50%\\\' y=\\\'50%\\\' font-size=\\\'10\\\' text-anchor=\\\'middle\\\' fill=\\\'%23aaa\\\'>Image</text></svg>'">`;
+        } else {
+          thumb.innerHTML = `<div style="font-size:12px; text-align:center; padding:6px; word-break:break-word;">📊<br>${escapeHtml(f.name)}</div>`;
+        }
+        gallery.appendChild(thumb);
+      });
+    } else {
+      gallery.innerHTML = '<p style="color:var(--zalando-gray-mid); grid-column: 1/-1;">No previewable files in folder.</p>';
+    }
+
+    document.getElementById('modal-drive-link').href = item.folderUrl;
+    document.getElementById('preview-modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('preview-modal').style.display = 'none';
+  }
+
+  function escapeHtml(text) {
+    if (!text) return '';
+    return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+</script>
+</body>
+</html>
